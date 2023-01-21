@@ -6,17 +6,13 @@
 # como resultado.
 
 n = int(input('Informe um número: '))
-somando= 0
-count = 1
-total = 0
-while count < 10:
-    if n % count == 0:
-        somando = somando + count
-        print(somando, count)
-        total = count
-    count += 1
-result =somando - total
-if (result == total):
+soma=0
+
+for count in range(1,n):
+    if n % count== 0:
+        soma += count
+      
+if (n == soma):
     print(f'O número "{n}" perfeito!')
 else:
     print(f'O número "{n}" não é perfeito!')
