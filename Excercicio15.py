@@ -6,7 +6,6 @@
 
 n = int(input('Informe um número: '))
 
-com = ''
 fatorial = 1
 nome = []
 print(n, '! = ', sep='', end='')
