@@ -7,7 +7,7 @@
 n = int(input('Informe um número: '))
 
 fatorial = 1
-nome = []
+
 print(n, '! = ', sep='', end='')
 while n > 0:
     fatorial = fatorial * n
