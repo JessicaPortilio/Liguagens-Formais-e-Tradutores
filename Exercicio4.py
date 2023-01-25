@@ -8,4 +8,4 @@ comprimento = int(input('Informe o comprimento do mesmo cômodo que deseja ilumi
 
 metro_quadrado = largura * comprimento
 watt = metro_quadrado * 18
-print(f'Cômodo {metro_quadrado}m2: Será preciso potência {watt}W para a iluminação')
+print(f'Cômodo {metro_quadrado}m2: Será preciso potência {watt}W para a iluminação.')
