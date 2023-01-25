@@ -25,8 +25,8 @@ def t_newline(t): #Adiciona a função t_newline
 t_ignore  = t_ignore  = ' \t' # Remove \n daqui
 
 #Criando analisador Lexico e realizando analise lexica
-lexer = lex.lex()
-lexer.input("2.5 a2 _  +_  - a4 - +\n ")
+lexer = lex.lex() 
+lexer.input("2.5 a2 _  +_  - a4 - +\n ") # Redefina o lexer e armazene uma nova string de entrada.
 for tok in lexer:
   print(tok.type, tok.value, tok.lineno, tok.lexpos) 
 

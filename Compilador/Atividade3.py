@@ -12,7 +12,7 @@ t_ignore  = ' \t\n'
 
 #Criando analisador Lexico e realizando analise lexica
 lexer = lex.lex()
-lexer.input("34 5+\n  - --+\n +  +")
+lexer.input("+\n  - --+\n +  +")
 
 for tok in lexer:
   print(tok.type, tok.value, tok.lineno, tok.lexpos) 
