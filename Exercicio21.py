@@ -11,32 +11,38 @@
 # outro número nessa nova faixa
 
 import random
+# o computador pode adivinhar um número de 1 a 100
+numero_menor = 1
+numero_maior = 100
 
-valor = random.randint(1, 100)
+# Aqui vou pegar a informação se o número pensado foi maior ou menor do que o computador escolheu
+maior_menor = ''
+# aqui eu pego um número de 1 a 100 aleatóriamente
+valor = random.randint(numero_menor, numero_maior)
+
 print(f'Você pensou em {valor}')
+
 resposta = input('Eu aceitei? ')
-maior_menor = input('Você pensou em um número maior ou menor? ')
-
 s = True
-
-while (s):
-    if resposta == 'sim':
-        print('Parabéns você aceitou!')
-        s = False
+while s:
+    if resposta == 'não':
+        maior_menor = input('Você pensou em um número maior ou menor? ')
+        if maior_menor == 'maior':
+            numero_menor = valor + 1
+            valor = random.randint(numero_menor, numero_maior)
+            print(f'Você pensou em {valor}')
+            resposta = input('Eu aceitei? ')
+            if resposta == 'sim':
+                print(f'Você aceitou!')
+                s = False
+        else:
+            numero_maior = valor - 1
+            valor = random.randint(numero_menor, numero_maior)
+            print(f'Você pensou em {valor}')
+            resposta = input('Eu aceitei? ')
+            if resposta == 'sim':
+                print(f'Você aceitou!')
+                s = False
     else:
-        if maior_menor == 'menor':
-            valor = random.randint(1, valor)
-            print(f'Você pensou em {valor}')
-            resposta = input('Eu aceitei? ')
-            maior_menor = input('Você pensou em um número maior ou menor? ')
-            if resposta == 'sim':
-                print('Parabéns você aceitou!')
-                s = False
-        elif maior_menor == 'maior':
-            valor = random.randint(valor, 100)
-            print(f'Você pensou em {valor}')
-            resposta = input('Eu aceitei? ')
-            maior_menor = input('Você pensou em um número maior ou menor? ')
-            if resposta == 'sim':
-                print('Parabéns você aceitou!')
-                s = False
+        print(f'Você aceitou!')
+        s = False
