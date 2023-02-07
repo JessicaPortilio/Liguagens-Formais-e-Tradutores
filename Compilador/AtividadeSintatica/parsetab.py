@@ -30,8 +30,8 @@ _lr_productions = [
   ('exp -> exp SOMA exp1','exp',3,'p_exp_soma','main.py',10),
   ('exp -> exp SUBTRACAO exp1','exp',3,'p_exp_subtracao','main.py',14),
   ('exp -> exp1','exp',1,'p_exp_exp1','main.py',18),
-  ('exp1 -> exp1 MULTIPLICACAO exp2','exp1',3,'p_exp_multiplicacao','main.py',22),
-  ('exp1 -> exp1 DIVISAO exp2','exp1',3,'p_exp_divisao','main.py',25),
-  ('exp1 -> exp2','exp1',1,'p_exp_exp2','main.py',28),
-  ('exp2 -> NUMERO','exp2',1,'p_exp_numero','main.py',31),
+  ('exp1 -> exp1 MULTIPLICACAO exp2','exp1',3,'p_exp1_mult','main.py',22),
+  ('exp1 -> exp1 DIVISAO exp2','exp1',3,'p_exp1_div','main.py',26),
+  ('exp1 -> exp2','exp1',1,'p_exp1_exp2','main.py',30),
+  ('exp2 -> NUMERO','exp2',1,'p_exp2_num','main.py',34),
 ]
