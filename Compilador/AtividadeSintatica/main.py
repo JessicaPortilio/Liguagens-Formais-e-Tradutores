@@ -75,6 +75,7 @@ main()
          # +
         # / \
         #3   4
+        
 #Exercício 6: Desenvolva código para todos os demais métodos  do sintático. Execute o código. E agora. A calculadora funciona?
 #  O código acima implementa todas as regras da gramática necessárias para o funcionamento da calculadora.
 
