@@ -14,13 +14,13 @@ def t_error(t):
 
 lexer = lex.lex()
 
-data = "Ola tudo bem"
+data = "Ola, como voce esta? Ola, tudo bem! Ola, vamos estudar? Ola, depois que almoçar"
 
 # Set input
 lexer.input(data)
 
-# Search for word
-word = ["Ola", "tudo", "vamos", "bem"]
+# Pesquisar por palavra
+word = ["Ola", "tudo", "vamos", "bem", "voce"]
 count = 0
 while True:
     tok = lexer.token()

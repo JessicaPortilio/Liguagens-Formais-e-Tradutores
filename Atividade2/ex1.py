@@ -8,8 +8,7 @@ import ply.lex as lex
 ### Desenvolva o analisador léxico em PLY, fazendo uso das seguintes regras:
 ### num = somente números binários, octais e hexadecimais na forma 0b101010010,
 ### 0c71342 e 0x1ff10302, respectivamente.
-### id = Começa com o símbolo @ seguido por letras ou números, com no máximo
-### 10 caracteres.
+### id = Começa com o símbolo @ seguido por letras ou números, com no máximo 10 caracteres.
 ### Os demais tokens são os terminais da linguagem.###
 
 # "Stm" é uma instrução que pode ser uma sequência de outras instruções separadas por ";", ou uma atribuição "id := Exp", ou uma instrução "print".
@@ -66,4 +65,4 @@ lex.input("""@comeca123 0b101010010;
 0c71342 := 0x1ff10302 print """)
 
 for l in lexer:
-  print(l.value)
+  print(l.type, l.value)
