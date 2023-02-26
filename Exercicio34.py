@@ -10,3 +10,8 @@ for i in range(30):
 lista2 = [0 if x % 2 == 0 else x for x in lista]
 
 print(lista2)
+
+
+
+
+
